@@ -1,0 +1,29 @@
+body {background-color: rgb(243, 240, 223);}
+body {
+    color: rgb(20, 9, 59);
+  }
+  
+  h1 {
+    color: rgb(46, 70, 148);
+  }
+  p {
+    color: rgb(28, 29, 31);
+  }
+  p {
+    color: rgb(84, 24, 223);
+  }
+
+  header {background-color: rgb(36, 36, 43);}
+  
+  a {
+    color: rgb(233, 118, 24);
+  }
+
+  #username {
+    font-family: fantasy;
+  }
+
+  .maintext {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
