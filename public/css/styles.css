@@ -19,6 +19,12 @@ body {
     color: rgb(233, 118, 24);
   }
 
+
+  i {
+    font-size: smaller;
+  }
+
+
   #username {
     font-family: fantasy;
   }
@@ -27,3 +33,4 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bolder;
   }
+
