@@ -1,0 +1,13 @@
+
+{
+ "offers": [ 
+     {"id": 1,
+        "name": "santi",
+        "salary": 120000,
+        "bonus": 9000,
+        "company":"ey",
+        "offerdate":"2021-10-12"
+}
+ ]
+}
+
