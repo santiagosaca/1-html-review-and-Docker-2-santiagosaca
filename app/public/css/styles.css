@@ -29,8 +29,14 @@ body {
     font-family: fantasy;
   }
 
+
   .maintext {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+  }
+
+  .description {
+    font-family:monospace;
     font-weight: bolder;
   }
 
