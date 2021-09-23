@@ -59,6 +59,10 @@
                 <hr>
   
               <div  id="someApp" >
+
+             
+             
+
                 <h1  id="username">{{ result.name.first }} {{ result.name.last }}</h1>
                 <a  v-bind:href="result.picture.large" target="_blank">
                   <img v-bind:src ="result.picture.large" width="250" height = "250"> </img> </a>
@@ -66,6 +70,11 @@
                 <p class="description">Birthday:{{ prettyBirthday }}</p>
                 <p class="description"> Age: {{ result.dob.age }}</p>
                 <p Class="description"><a v-bind:href="'mailto:' + result.email">email: {{ result.email }}</a></p>
+
+                <form v-on:submit.prevent="fetchUserData">
+                  <button type="submit">Refresh</button>
+                </form>
+                
               </div>
             </div>
            
