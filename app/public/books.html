@@ -44,74 +44,24 @@
     <table id="bookTable" class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Author</th>
-          <th scope="col">Year Published</th>
-          <th scope="col">Publisher</th>
-          <th scope="col">Page Count</th>
-          <th scope="col">MSRP</th>
-
-
+          <th>title</th>
+          <th>author</th>
+          <th>year Published</th>
+          <th>publisher</th>
+          <th>page Count</th>
+          <th>page Count</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th scope="row">AAA</th>
-          <td>Mark</td>
-          <td>2004</td>
-          <td>GudBooks</td>
-          <td>4</td>
-          <td>99$</td>
-
-        </tr>
-        <tr>
-          <th scope="row">BBB</th>
-          <td>Jacob</td>
-          <td>2003</td>
-          <td>Expenzive Books</td>
-          <td>5</td>
-          <td>999$</td>
-
-        </tr>
-        <tr>
-          <th scope="row">CCC</th>
-          <td>Larry</td>
-          <td>2002</td>
-          <td>CheapBooks</td>
-          <td>6</td>
-          <td>8$</td>
-
-        </tr>
-        <tr>
-          <th scope="row">DDD</th>
-          <td>Hairy</td>
-          <td>2001</td>
-          <td>CheapBooks</td>
-          <td>7</td>
-          <td>15$</td>
-
-        </tr>
-        <tr>
-          <th scope="row">EEE</th>
-          <td>Harri</td>
-          <td>2000</td>
-          <td>GudBooks</td>       
-          <td>40</td>   
-          <td>30$</td>
-
-
-        </tr>
-        <tr>
-          <th scope="row">FFF</th>
-          <td>Mary</td>
-          <td>1999</td>
-          <td>GudBooks</td>
-          <td>10</td>
-          <td>40$</td>
-
-
-        </tr>
-      </tbody>
+        <tbody>
+            <tr v-for="book in books">
+                <td>{{book.title }}</td>
+                <td>{{book.author }}</td>
+                <td>{{book.yearpublished }}</td>
+                <td>{{book.publisher }}</td>
+                <td>{{book.pagecount }}</td>
+                <td>{{ prettyDollar(book.msrp) }}</td>
+            </tr>
+        </tbody>
     </table>
 <hr>
 
