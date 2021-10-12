@@ -34,6 +34,39 @@ INSERT INTO offer(id, studentId, companyName, salary, bonus, offerDate) VALUES
   (4, 3, 'Amazon', 122000, 11000, '2021-10-15')
 ;
 
+
+
+
+
+
+-- SELECT * FROM students;
+
+DROP TABLE IF EXISTS book;
+CREATE TABLE book (
+	title VARCHAR(24) NOT NULL DEFAULT '',
+    author VARCHAR(20) NOT NULL DEFAULT '',
+    
+    yearpublished  date NOT NULL DEFAULT(CURRENT_DATE),
+    publisher VARCHAR(20) NOT NULL DEFAULT '',
+    pagecount int NOT NULL DEFAULT 0,
+	msrp int NOT NULL DEFAULT 0
+
+);
+
+-- Student 1 has no offers, Student 2 has 3 offers, Student 3 has one offer
+INSERT INTO book (title, author, yearpublished, publisher, pagecount, msrp) VALUES
+  ("aaa", "mark", 2004, "Gudbooks", 4, 99),
+  ("bbb", "jacob", 2003, "expenzive books", 5, 999),
+  ("ccc", "larry", 2002, "cheapbooks", 6, 8),
+  ("ddd", "hairy", 2001, "cheapbooks", 7, 15),
+("eee", "harry", 2000, "gudbooks", 40, 30),
+("fff", "mary", 1999, "gudbooks", 10, 40)
+;
+-- COMMIT;
+
+-- CREATE USER 'msisreader'@'%' IDENTIFIED BY 'msisreadonly';
+-- GRANT SELECT ON * . * TO 'msisreader'@'%';
+
 -- COMMIT;
 
 -- CREATE USER 'msisreader'@'%' IDENTIFIED BY 'msisreadonly';
