@@ -51,7 +51,7 @@
           <th>year Published</th>
           <th>publisher</th>
           <th>page Count</th>
-          <th>page Count</th>
+          <th>msrp</th>
         </tr>
       </thead>
         <tbody>
@@ -65,42 +65,41 @@
             </tr>
         </tbody>
     </table>
-</div>
     <!-- Form Section -->
-    <form>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Title</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Title">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Author</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Author">
-        </div>
+   
+    <h3> Book</h3>
+    
+    <form v-on:submit.prevent="postNewBook">
+      <div class="mb-3">
+        <label for="title" class="form-label">title</label>
+        <input type="text" v-model="bookForm.title"
+         class="form-control" id="title">
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Year Published</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Year Published">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Publisher</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Publisher">
-        </div>
+      <div class="mb-3">
+        <label for="author" class="form-label">author</label>
+        <input type="text" v-model="bookForm.author" class="form-control" id="author">
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Page Count</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Page Count">
-        </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">MSRP</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="MSRP">
-        </div>
+      <div class="mb-3">
+        <label for="yearpublished" class="form-label">year published</label>
+        <input type="number" v-model="bookForm.yearpublished" class="form-control" id="yearpublished">
       </div>
-
-      <button type="submit" class="btn btn-primary">Add to table</button>
+      <div class="mb-3">
+        <label for="publisher" class="form-label">publisher</label>
+        <input type="text" v-model="bookForm.publisher" class="form-control" id="publisher">
+      </div>
+      <div class="mb-3">
+        <label for="pagecount" class="form-label">pagecount</label>
+        <input type="number" v-model="bookForm.pagecount" class="form-control" id="pagecount">
+      </div>
+      <div class="mb-3">
+        <label for="msrp" class="form-label">msrp</label>
+        <input type="number" v-model="bookForm.msrp" class="form-control" id="msrp">
+      </div>
+      <button type="submit" class="btn btn-primary but">Submit</button>
     </form>
+</div>
+
+    <!-- <div class="noBooks" v-if="! books.length"> -->
 
     <!-- Optional JavaScript; choose one of the two! -->
 

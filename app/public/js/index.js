@@ -1,8 +1,4 @@
-/*!
- * tablesort v5.2.1 (2020-06-02)
- * http://tristen.ca/tablesort/demo/
- * Copyright (c) 2020 ; Licensed MIT
-*/
+
 const SomeApp = {
     data() {
       return {
@@ -57,10 +53,10 @@ const SomeApp = {
             });
         },
         postNewOffer(evt) {
-          this.offerForm.studentId = this.selectedStudent.studentId;
-  
-          console.log("Posting:", JSON.stringify(this.offerForm));
+          this.offerForm.studentId = this.selectedStudent.id;        
           
+          console.log("Posting!", this.offerForm);
+  
           fetch('api/offer/create.php', {
               method:'POST',
               body: JSON.stringify(this.offerForm),
@@ -72,8 +68,9 @@ const SomeApp = {
             .then( json => {
               console.log("Returned from post:", json);
               // TODO: test a result was returned!
-              this.offers.push(json[0]);
-  
+              this.offers = json;
+              
+              // reset the form
               this.offerForm = {};
             });
         }
