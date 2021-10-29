@@ -1,4 +1,3 @@
-
 const SomeApp = {
     data() {
       return {
